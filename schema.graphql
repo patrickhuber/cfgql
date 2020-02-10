@@ -1,0 +1,49 @@
+type Foundation {
+    id: ID
+    applications: [Application]
+    organizations: [Organization]
+    spaces: [Space]
+}
+
+type Application {
+    id: ID
+    name: String
+    foundation: Foundation
+    space: [Space]
+}
+
+type Organization {
+    id: ID
+    foundation: Foundation
+    spaces: [Space]
+}
+
+type Service {
+    id: ID
+    name: String
+    foundation: Foundation
+}
+
+type ServiceInstance{
+    id: ID
+    foundation: Foundation
+    service: Service
+}
+
+type ServiceBinding {
+    id: ID
+    foundation: Foundation
+    application: Application
+    serviceInstance: ServiceInstance
+}
+
+type Space {
+    id: ID
+    foundation: Foundation
+    organization: Organization
+    applications: [Application]
+}
+
+type Query {
+  foundations: [Foundation]
+}

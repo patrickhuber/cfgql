@@ -9,7 +9,7 @@ type Application {
     id: ID
     name: String
     foundation: Foundation
-    space: [Space]
+    space: Space
 }
 
 type Organization {

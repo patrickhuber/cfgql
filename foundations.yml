@@ -1,5 +1,5 @@
 - name: lab
   id: 81a2a888-37ad-4365-ba24-961393ebeecf
-  api: https://login.sys.dell.azure.pivotal.rocks
+  api: https://api.sys.dell.azure.pivotal.rocks
   username: ((lab_username))
   password: ((lab_passowrd))
